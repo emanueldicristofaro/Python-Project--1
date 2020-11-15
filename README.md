@@ -3,6 +3,8 @@
  
  Integrantes:
  
- Emanuel Di Cristofaro,
- Aaron Pérez Pereira,
- Boris Torrado Hernandez.
+ Emanuel Di Cristofaro Esposito (Alias: emanueldicristofaro)
+ 
+ Aaron Pérez Pereira (Alias: aaron24kilates)
+ 
+ Boris Torrado Hernandez (Alias: brstor)
