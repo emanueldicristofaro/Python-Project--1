@@ -3,6 +3,6 @@
  
  Integrantes:
  
- Emanuel Di Cristofaro
- Aaron Pérez Pereira
- Boris Torrado
+ Emanuel Di Cristofaro,
+ Aaron Pérez Pereira,
+ Boris Torrado.
