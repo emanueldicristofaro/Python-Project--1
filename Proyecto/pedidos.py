@@ -102,9 +102,152 @@ def pedidoSandwiches(nombre):
                         print('Por favor indique el ingrediente como se le solicita')
 
             elif eleccion == 'd':
-                precio_total = precio_total + precios_tamano.get('Doble') 
+                precio_total = precio_total + precios_tamano.get('Doble')
+                eleccion_escogida = 'Doble'
+
+                print('Haz seleccionado el tamaño doble')
+
+                si_no = 'si'
+                while si_no == 'si':
+                    print()
+                    print('Por favor indique los ingredientes que desee usar')
+                    print('Si no desea ninguno solamente presione (q)')
+                    print()
+                    print('Ingredientes: ')
+                    print('Jamón indique (ja)')
+                    print('Champiñiones indique (ch)')
+                    print('Pimentón indique (pi)')
+                    print('Doble Queso indique (dq)')
+                    print('Aceitunas indique (ac)')
+                    print('Pepperoni indique (pp)')
+                    print('Salchichón indique (sa)')
+
+                    eleccion_s = input('Indique su elección: ')
+                    eleccion_s = eleccion_s.lower()
+
+                    if eleccion_s == 'ja':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[0])
+                        precio_total = precio_total + precios_ingredientes.get('Jamon')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'ch':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[1])
+                        precio_total = precio_total + precios_ingredientes.get('Champiñiones')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'pi':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[2])
+                        precio_total = precio_total + precios_ingredientes.get('Pimentón')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'dq':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[3])
+                        precio_total = precio_total + precios_ingredientes.get('Doble Queso')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'ac':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[4])
+                        precio_total = precio_total + precios_ingredientes.get('Aceitunas')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'pp':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[5])
+                        precio_total = precio_total + precios_ingredientes.get('Pepperoni')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'sa':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[6])
+                        precio_total = precio_total + precios_ingredientes.get('Salchichón')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'q':
+                        print()
+                        print('Sandwich doble con queso')
+                        break
+                        
+                    else:
+                        print('Por favor indique el ingrediente como se le solicita')
+
             elif eleccion == 'i':
-                precio_total = precio_total + precios_tamano.get('Individual') 
+                precio_total = precio_total + precios_tamano.get('Individual')
+                eleccion_escogida = 'Individual'
+
+                print('Haz seleccionado el tamaño Individual')
+
+                si_no = 'si'
+                while si_no == 'si':
+                    print()
+                    print('Por favor indique los ingredientes que desee usar')
+                    print('Si no desea ninguno solamente presione (q)')
+                    print()
+                    print('Ingredientes: ')
+                    print('Jamón indique (ja)')
+                    print('Champiñiones indique (ch)')
+                    print('Pimentón indique (pi)')
+                    print('Doble Queso indique (dq)')
+                    print('Aceitunas indique (ac)')
+                    print('Pepperoni indique (pp)')
+                    print('Salchichón indique (sa)')
+
+                    eleccion_s = input('Indique su elección: ')
+                    eleccion_s = eleccion_s.lower()
+
+                    if eleccion_s == 'ja':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[0])
+                        precio_total = precio_total + precios_ingredientes.get('Jamon')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'ch':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[1])
+                        precio_total = precio_total + precios_ingredientes.get('Champiñiones')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'pi':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[2])
+                        precio_total = precio_total + precios_ingredientes.get('Pimentón')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'dq':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[3])
+                        precio_total = precio_total + precios_ingredientes.get('Doble Queso')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'ac':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[4])
+                        precio_total = precio_total + precios_ingredientes.get('Aceitunas')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'pp':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[5])
+                        precio_total = precio_total + precios_ingredientes.get('Pepperoni')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'sa':
+                        lista_ingredientes_escogidos.append(lista_ingredientes[6])
+                        precio_total = precio_total + precios_ingredientes.get('Salchichón')
+
+                        si_no = input('¿Desea agregar otro ingrediente si/no: ')
+
+                    elif eleccion_s == 'q':
+                        print()
+                        print('Sandwich Individual con queso')
+                        break
+                        
+                    else:
+                        print('Por favor indique el ingrediente como se le solicita')
             else:
                 print('Por favor debe escoger uno de los tamaños indicados')
 
