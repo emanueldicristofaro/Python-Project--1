@@ -1,3 +1,4 @@
+import banco
 
 # Toda la lógica principal de los pedidos de sandwiches y bebidas.
 
@@ -23,7 +24,7 @@ def pedidoSandwiches(nombre):
             print(f'\n\nSandwich número {contador}')
             print()
             print('Escoja una opción')
-            print('Tamaños: Triple ( t ) Doble ( d ) Individual ( i ):')
+            print('Tamaños: Triple ( t ) Precio: 580 BsS, Doble ( d ) Precio: 430 BsS, Individual ( i ) Precio: 280 BsS:')
 
             eleccion = input('Introduzca su eleccion: ')
             eleccion = eleccion.lower()
@@ -38,13 +39,14 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-                print('Jamón indique (ja)')
-                print('Champiñiones indique (ch)')
-                print('Pimentón indique (pi)')
-                print('Doble Queso indique (dq)')
-                print('Aceitunas indique (ac)')
-                print('Pepperoni indique (pp)')
-                print('Salchichón indique (sa)')
+
+                print('Jamón indique (ja) Precio: 40 BsS')
+                print('Champiñiones indique (ch) Precio: 35 BsS')
+                print('Pimentón indique (pi) Precio: 30 BsS')
+                print('Doble Queso indique (dq) Precio: 40 BsS')
+                print('Aceitunas indique (ac) Precio: 57.5 BsS')
+                print('Pepperoni indique (pp) Precio: 38.5 BsS')
+                print('Salchichón indique (sa) Precio: 62.5 BsS')
                 print()
                 while si_no == 'si':
                     eleccion_s = input('Indique su elección (enter para terminar): ')
@@ -112,13 +114,14 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-                print('Jamón indique (ja)')
-                print('Champiñiones indique (ch)')
-                print('Pimentón indique (pi)')
-                print('Doble Queso indique (dq)')
-                print('Aceitunas indique (ac)')
-                print('Pepperoni indique (pp)')
-                print('Salchichón indique (sa)')
+
+                print('Jamón indique (ja) Precio: 40 BsS')
+                print('Champiñiones indique (ch) Precio: 35 BsS')
+                print('Pimentón indique (pi) Precio: 30 BsS')
+                print('Doble Queso indique (dq) Precio: 40 BsS')
+                print('Aceitunas indique (ac) Precio: 57.5 BsS')
+                print('Pepperoni indique (pp) Precio: 38.5 BsS')
+                print('Salchichón indique (sa) Precio: 62.5 BsS')
                 print()
                 while si_no == 'si':
                     eleccion_s = input('Indique su elección (enter para terminar): ')
@@ -186,13 +189,14 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-                print('Jamón indique (ja)')
-                print('Champiñiones indique (ch)')
-                print('Pimentón indique (pi)')
-                print('Doble Queso indique (dq)')
-                print('Aceitunas indique (ac)')
-                print('Pepperoni indique (pp)')
-                print('Salchichón indique (sa)')
+
+                print('Jamón indique (ja) Precio: 40 BsS')
+                print('Champiñiones indique (ch) Precio: 35 BsS')
+                print('Pimentón indique (pi) Precio: 30 BsS')
+                print('Doble Queso indique (dq) Precio: 40 BsS')
+                print('Aceitunas indique (ac) Precio: 57.5 BsS')
+                print('Pepperoni indique (pp) Precio: 38.5 BsS')
+                print('Salchichón indique (sa) Precio: 62.5 BsS')
                 print()
                 while si_no == 'si':
                     eleccion_s = input('Indique su elección (enter para terminar): ')
@@ -255,33 +259,111 @@ def pedidoSandwiches(nombre):
 
         if option == '2':
             print()
+            print('Escoja una opción')
+            print('Bebidas: Pepsi (pe) Precio: 15 BsS, Coca Cola (co) Precio: 17 BsS, Frescolita (fres) Precio: 14 BsS, Chinotto (chi) Precio: 15 BsS')
+
+            eleccion_b = input('Introduzca su eleccion: ')
+            eleccion_b = eleccion_b.lower()
+
+            if eleccion_b == 'pe':
+                print('Usted a escogido Pepsi')
+                precio_total = precio_total + precios_bebidas.get('Pepsi')
+                lista_bebidas_escogidas.append(lista_bebidas[0])
+
+            elif eleccion_b == 'co':
+                print('Usted a escogido Coca Cola')
+                precio_total = precio_total + precios_bebidas.get('Coca Cola')
+                lista_bebidas_escogidas.append(lista_bebidas[1])
+
+            elif eleccion_b == 'fres':
+                print('Usted a escogido Frescolita')
+                precio_total = precio_total + precios_bebidas.get('Frescolita')
+                lista_bebidas_escogidas.append(lista_bebidas[2])
+
+            elif eleccion_b == 'chi':
+                print('Usted a escogido Chinotto')
+                precio_total = precio_total + precios_bebidas.get('Chinotto')
+                lista_bebidas_escogidas.append(lista_bebidas[3])
+
+            else:
+                print('Por favor debe escoger una de las bebidas indicadas') 
 
         if option == '3':
 
             print()
-            print(f'Usted seleccionó el sandwich de tamaño {eleccion_escogida}')
-            print(f'Los ingredientes escogidos fueron {lista_ingredientes_escogidos}')
             print(f'Precio total a pagar {precio_total}')
+            print()
+            metodo_de_pago = input('Por favor seleccione el método de pago (Débito (deb) o Crédito (cre)): ')
+            metodo_de_pago = metodo_de_pago.lower()
 
-            si_no_p = input('¿Desea continuar? si/no: ')
-            si_no_p = si_no_p.lower()
+            if metodo_de_pago == 'deb':
 
-            if si_no_p == 'si':
+                nif = input('Por favor indique su cédula: ')
+                tarjeta = banco.metodoPagoDebito(nif)
+                monto = tarjeta.get('montoTarjeta')
+
                 print()
-                print(f'EL pedido tiene un total de un sandwich por un monto de {precio_total}')
-                print('Gracias por su compra, regrese pronto')
-                contador += 1
-                eleccion_escogida = ''
-                precio_total = 0
-                lista_ingredientes_escogidos.clear()
+                print(f'El monto de la tarjeta de débito es de: {monto}')
 
-            elif si_no_p == 'no':
-                eleccion_escogida = ''
-                precio_total = 0
-                lista_ingredientes_escogidos.clear()
+                if monto < precio_total:
+                    print('Lo siento no cuenta con suficiente saldo')
+                else:
+                    si_no_pp = input('¿Desea efectuar el pago? si/no: ')
+                    si_no_pp = si_no_pp.lower()
+
+                    if si_no_pp == 'si':
+                        print('Gracias por su compra, regrese pronto')
+                        banco.descontarDebito(precio_total, nif)
+                        eleccion_escogida = ''
+                        precio_total = 0
+                        lista_ingredientes_escogidos.clear()
+                        lista_bebidas_escogidas.clear()
+                        
+                    elif si_no_pp == 'no':
+                        print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
+                        eleccion_escogida = ''
+                        precio_total = 0
+                        lista_ingredientes_escogidos.clear()
+                        lista_bebidas_escogidas.clear()
+
+                    else:
+                        print('Por favor indicar si/no')
+
+            elif metodo_de_pago == 'cre':
+
+                nif = input('Por favor indique su cédula: ')
+                tarjeta = banco.metodoPagoCredito(nif)
+                monto = tarjeta.get('montoTarjeta')
+
+                print()
+                print(f'El monto de la tarjeta de crédito es de: {monto}')
+
+                if monto < precio_total:
+                    print('Lo siento no cuenta con suficiente saldo')
+                else:
+                    si_no_pp = input('¿Desea efectuar el pago? si/no: ')
+                    si_no_pp = si_no_pp.lower()
+
+                    if si_no_pp == 'si':
+                        print('Gracias por su compra, regrese pronto')
+                        banco.descontarCredito(precio_total, nif)
+                        eleccion_escogida = ''
+                        precio_total = 0
+                        lista_ingredientes_escogidos.clear()
+                        lista_bebidas_escogidas.clear()
+                        
+                    elif si_no_pp == 'no':
+                        print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
+                        eleccion_escogida = ''
+                        precio_total = 0
+                        lista_ingredientes_escogidos.clear()
+                        lista_bebidas_escogidas.clear()
+
+                    else:
+                        print('Por favor indicar si/no')
             
             else:
-                print('Por favor indique si/no')
+                print('Por favor indicar lo solicitado')
 
         print()
         print(f'Bienvenido a sandwiches GUNS N ROSES {nombre}')
