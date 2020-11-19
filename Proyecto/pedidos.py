@@ -39,6 +39,7 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
+
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
@@ -113,6 +114,7 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
+
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
@@ -187,6 +189,7 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
+
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
