@@ -1,4 +1,5 @@
 import pedidos
+import banco
 
 # Proyecto #1
 # Integrantes:
@@ -8,7 +9,7 @@ import pedidos
 
 clients = {}
 option = ''
-while option != '4':
+while option != '5':
     if option == '1':
         nif = input('Por favor indique su cédula: ')
         name = input('Por favor indique su nombre completo: ')
@@ -17,6 +18,7 @@ while option != '4':
         email = input('Indique su correo electrónico: ')
         client = {'nombre':name, 'dirección':address, 'teléfono':phone, 'email':email}
         clients[nif] = client
+
     if option == '2':
         nif = input('Por favor indique su cédula: ')
         if nif in clients:
@@ -26,13 +28,26 @@ while option != '4':
                 print(key.title() + ':', value)
         else:
             print('No se encuentra registrado en el sistema')
+
     if option == '3':
+        nif = input('Por favor indique su cédula: ')
+        eleccion = input('Indique el tipo de tarjeta (Débito (deb) o Crédito (cre)): ')
+        eleccion = eleccion.lower()
+        
+        if eleccion == 'deb':
+            banco.encontrarDebito(nif)
+        elif eleccion == 'cre':
+            banco.encontrarCredito(nif)
+        else:
+            print('Por favor indicar lo solicitado')
+
+    if option == '4':
         nif = input('Por favor indique su cédula: ')
 
         if nif in clients:
             nombre = clients[nif].get('nombre')
             pedidos.pedidoSandwiches(nombre)
-            option = '4'
+            option = '5'
         else:
             print('La cedula introducida no se encuentra en el sistema')
 
@@ -50,6 +65,6 @@ while option != '4':
 
     print()
 
-    option = input('\nMenú de opciones\n(1) Registrarse\n(2) Información del cliente\n(3) Iniciar sesión\n(4) Terminar\nElige una opción:')
+    option = input('\nMenú de opciones\n(1) Registrarse\n(2) Información del cliente\n(3) Ver información de la tarjeta\n(4) Iniciar sesión\n(5) Terminar\nElige una opción:')
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
