@@ -243,7 +243,7 @@ def pedidoSandwiches(nombre):
 
                     elif eleccion_s == 'q':
                         print()
-                        print('Sandwich Individual con queso')
+                        print('Sandwich Individual  con queso')
                         break
                         
                     else:
@@ -252,7 +252,25 @@ def pedidoSandwiches(nombre):
                 print('Por favor debe escoger uno de los tamaños indicados')
 
         if option == '2':
+
             print()
+            print('Escoja una opción')
+            print('Bebidas: Pepsi (pe), Coca Cola (co), Frescolita (fres), Chinotto (chi)')
+
+            eleccion = input('Introduzca su eleccion: ')
+            eleccion = eleccion.lower()
+
+            if eleccion == 'pe':
+                precio_total = precio_total + precios_bebidas.get('Pepsi')
+
+            elif eleccion_s == 'co':
+                precio_total = precio_total + precios_bebidas.get('Coca Cola')
+
+            elif eleccion_s == 'fres':
+                precio_total = precio_total + precios_bebidas.get('Frescolita')
+
+            elif eleccion_s == 'chi':
+                precio_total = precio_total + precios_bebidas.get('Chinotto')
 
         if option == '3':
 
