@@ -7,20 +7,25 @@ import banco
 # Aaron Perez Pereira
 # Boris Torrado Hernandez
 
+# En este módulo presenta el menú principal del sistema
+# Registro de nuevos clientes, mostrar los mismos, ver info de la tarjeta, iniciar sesión y cerrar el sistema.
+
 clients = {}
 option = ''
 while option != '5':
     if option == '1':
-        nif = input('Por favor indique su cédula: ')
+        #Registro de nuevos clientes.
+        nif = int(input('Por favor indique su cédula: '))
         name = input('Por favor indique su nombre completo: ')
         address = input('Indique su dirección: ')
-        phone = input('Indique su número telefónico: ')
+        phone = int(input('Indique su número telefónico: '))
         email = input('Indique su correo electrónico: ')
         client = {'nombre':name, 'dirección':address, 'teléfono':phone, 'email':email}
         clients[nif] = client
 
     if option == '2':
-        nif = input('Por favor indique su cédula: ')
+        #Buscar los clientes registrados.
+        nif = int(input('Por favor indique su cédula: '))
         if nif in clients:
             print()
             print('NIF:', nif)
@@ -30,7 +35,8 @@ while option != '5':
             print('No se encuentra registrado en el sistema')
 
     if option == '3':
-        nif = input('Por favor indique su cédula: ')
+        # Mostrar información de una tarjeta del cliente registrado.
+        nif = int(input('Por favor indique su cédula: '))
         eleccion = input('Indique el tipo de tarjeta (Débito (deb) o Crédito (cre)): ')
         eleccion = eleccion.lower()
         
@@ -42,7 +48,8 @@ while option != '5':
             print('Por favor indicar lo solicitado')
 
     if option == '4':
-        nif = input('Por favor indique su cédula: ')
+        #Para poder acceder al sistema de pedidos.
+        nif = int(input('Por favor indique su cédula: '))
 
         if nif in clients:
             nombre = clients[nif].get('nombre')

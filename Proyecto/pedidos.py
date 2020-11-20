@@ -1,6 +1,6 @@
 import banco
 
-# Toda la lógica principal de los pedidos de sandwiches y bebidas.
+# Toda la lógica principal de los pedidos de sandwiches, bebidas y pago.
 
 def pedidoSandwiches(nombre):
 
@@ -39,7 +39,6 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
@@ -116,7 +115,6 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
@@ -193,7 +191,6 @@ def pedidoSandwiches(nombre):
                 print('Por favor indique los ingredientes que desee usar')
                 print()
                 print('Ingredientes: ')
-
                 print('Jamón indique (ja) Precio: 40 BsS')
                 print('Champiñiones indique (ch) Precio: 35 BsS')
                 print('Pimentón indique (pi) Precio: 30 BsS')
@@ -304,7 +301,7 @@ def pedidoSandwiches(nombre):
 
             if metodo_de_pago == 'deb':
 
-                nif = input('Por favor indique su cédula: ')
+                nif = int(input('Por favor indique su cédula: '))
                 tarjeta = banco.metodoPagoDebito(nif)
                 monto = tarjeta.get('montoTarjeta')
 
@@ -337,7 +334,7 @@ def pedidoSandwiches(nombre):
 
             elif metodo_de_pago == 'cre':
 
-                nif = input('Por favor indique su cédula: ')
+                nif = int(input('Por favor indique su cédula: '))
                 tarjeta = banco.metodoPagoCredito(nif)
                 monto = tarjeta.get('montoTarjeta')
 
@@ -384,4 +381,4 @@ def pedidoSandwiches(nombre):
 
         print()
         option = input('\nMenú de Alimentos\n(1) Sandwich\n(2) Bebidas\n(3) Pagar\n(4) Salir\nElige una opción:')
-# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
