@@ -101,6 +101,7 @@ def pedidoSandwiches(nombre):
                         print(f'Precio total del pedido {precio_total} BsS')
                         contador += 1                
                         si_no = 'no'
+                        lista_ingredientes_escogidos.clear()
                         break
 
                     else:
@@ -177,6 +178,7 @@ def pedidoSandwiches(nombre):
                         print(f'Precio total del pedido {precio_total} BsS')
                         contador += 1                
                         si_no = 'no'
+                        lista_ingredientes_escogidos.clear()
                         break
 
                     else:
@@ -253,6 +255,7 @@ def pedidoSandwiches(nombre):
                         print(f'Precio total del pedido {precio_total} BsS')
                         contador += 1                
                         si_no = 'no'
+                        lista_ingredientes_escogidos.clear()
                         break
 
                     else:
