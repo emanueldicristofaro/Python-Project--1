@@ -235,11 +235,13 @@ def pedidoSandwiches(nombre):
 
                     elif eleccion_s == '':
                         print()
-                        print('Usted seleccionó un sandwich ' + eleccion_escogida, end=' '),
                         if lista_ingredientes_escogidos:
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida , end=' '),
                             print('con ', end='')
                             for ingerdiente in lista_ingredientes_escogidos:
                                 print(ingerdiente, end=", ")
+                        else: 
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida + ' con Queso', end=' '),
                         print(f'\nSubtotal a pagar por un sandwich {eleccion_escogida}: {precio_subtotal}')
                         precio_total += precio_subtotal
                         precio_subtotal = 0
@@ -288,7 +290,7 @@ def pedidoSandwiches(nombre):
         if option == '3':
 
             print()
-            print(f'Precio total a pagar {precio_total}')
+            print(f'Precio total a pagar {precio_total} BsS')
             print()
             metodo_de_pago = input('Por favor seleccione el método de pago (Débito (deb) o Crédito (cre)): ')
             metodo_de_pago = metodo_de_pago.lower()
@@ -300,7 +302,7 @@ def pedidoSandwiches(nombre):
                 monto = tarjeta.get('montoTarjeta')
 
                 print()
-                print(f'El monto de la tarjeta de débito es de: {monto}')
+                print(f'El monto de la tarjeta de débito es de: {monto} BsS')
 
                 if monto < precio_total:
                     print('Lo siento no cuenta con suficiente saldo')
@@ -333,7 +335,7 @@ def pedidoSandwiches(nombre):
                 monto = tarjeta.get('montoTarjeta')
 
                 print()
-                print(f'El monto de la tarjeta de crédito es de: {monto}')
+                print(f'El monto de la tarjeta de crédito es de: {monto} BsS')
 
                 if monto < precio_total:
                     print('Lo siento no cuenta con suficiente saldo')
