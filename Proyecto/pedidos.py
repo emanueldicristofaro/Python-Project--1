@@ -1,6 +1,6 @@
 import banco
 
-# Toda la lógica principal de los pedidos de sandwiches y bebidas.
+# Toda la lógica principal de los pedidos de sandwiches, bebidas y pago.
 
 def pedidoSandwiches(nombre):
 
@@ -375,4 +375,4 @@ def pedidoSandwiches(nombre):
 
         print()
         option = input('\nMenú de Alimentos\n(1) Sandwich\n(2) Bebidas\n(3) Pagar\n(4) Salir\nElige una opción:')
-# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+# ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

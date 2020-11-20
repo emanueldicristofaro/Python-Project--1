@@ -67,8 +67,8 @@ def encontrarDebito(nif):
         print('NIF:', nif)
         for key, value in listas_tarjetas_debito[nif].items():
             print(key.title() + ':', value)
-        else:
-            print('No se encuentra la tarjeta de débito en el sistema')
+    else:
+        print('No se encuentra la tarjeta de débito en el sistema')
 
 def encontrarCredito(nif):
     print()
@@ -78,5 +78,5 @@ def encontrarCredito(nif):
         print('NIF:', nif)
         for key, value in listas_tarjetas_credito[nif].items():
             print(key.title() + ':', value)
-        else:
-            print('No se encuentra la tarjeta de crédito en el sistema')
+    else:
+        print('No se encuentra la tarjeta de crédito en el sistema')
