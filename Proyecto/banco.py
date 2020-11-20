@@ -10,7 +10,7 @@ def metodoPagoDebito(nif):
 
     if nif not in listas_tarjetas_debito:
         nombre_tarjeta = input('Por favor indique el nombre de su tarjeta de débito: ')
-        numero_tarjeta = input('Por favor indique su numero de su tarjeta de débito: ')
+        numero_tarjeta = int(input('Por favor indique su numero de su tarjeta de débito: '))
         monto_tarjeta = round(random.uniform(5000, 10000), 2)
 
         lista_tarjeta = {'nombreTarjeta': nombre_tarjeta, 'numeroTarjeta': numero_tarjeta, 'montoTarjeta': monto_tarjeta}
@@ -29,7 +29,7 @@ def metodoPagoCredito(nif):
 
     if nif not in listas_tarjetas_credito:
         nombre_tarjeta = input('Por favor indique el nombre de su tarjeta de crédito: ')
-        numero_tarjeta = input('Por favor indique su numero de su tarjeta de crédito: ')
+        numero_tarjeta = int(input('Por favor indique su numero de su tarjeta de crédito: '))
         monto_tarjeta = round(random.uniform(5000, 10000), 2)
     
         lista_tarjeta = {'nombreTarjeta': nombre_tarjeta, 'numeroTarjeta': numero_tarjeta, 'montoTarjeta': monto_tarjeta}

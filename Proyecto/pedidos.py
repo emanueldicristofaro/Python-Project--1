@@ -295,7 +295,7 @@ def pedidoSandwiches(nombre):
 
             if metodo_de_pago == 'deb':
 
-                nif = input('Por favor indique su cédula: ')
+                nif = int(input('Por favor indique su cédula: '))
                 tarjeta = banco.metodoPagoDebito(nif)
                 monto = tarjeta.get('montoTarjeta')
 
@@ -328,7 +328,7 @@ def pedidoSandwiches(nombre):
 
             elif metodo_de_pago == 'cre':
 
-                nif = input('Por favor indique su cédula: ')
+                nif = int(input('Por favor indique su cédula: '))
                 tarjeta = banco.metodoPagoCredito(nif)
                 monto = tarjeta.get('montoTarjeta')
 

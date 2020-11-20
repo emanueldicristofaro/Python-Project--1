@@ -15,17 +15,17 @@ option = ''
 while option != '5':
     if option == '1':
         #Registro de nuevos clientes.
-        nif = input('Por favor indique su cédula: ')
+        nif = int(input('Por favor indique su cédula: '))
         name = input('Por favor indique su nombre completo: ')
         address = input('Indique su dirección: ')
-        phone = input('Indique su número telefónico: ')
+        phone = int(input('Indique su número telefónico: '))
         email = input('Indique su correo electrónico: ')
         client = {'nombre':name, 'dirección':address, 'teléfono':phone, 'email':email}
         clients[nif] = client
 
     if option == '2':
         #Buscar los clientes registrados.
-        nif = input('Por favor indique su cédula: ')
+        nif = int(input('Por favor indique su cédula: '))
         if nif in clients:
             print()
             print('NIF:', nif)
@@ -36,7 +36,7 @@ while option != '5':
 
     if option == '3':
         # Mostrar información de una tarjeta del cliente registrado.
-        nif = input('Por favor indique su cédula: ')
+        nif = int(input('Por favor indique su cédula: '))
         eleccion = input('Indique el tipo de tarjeta (Débito (deb) o Crédito (cre)): ')
         eleccion = eleccion.lower()
         
@@ -49,7 +49,7 @@ while option != '5':
 
     if option == '4':
         #Para poder acceder al sistema de pedidos.
-        nif = input('Por favor indique su cédula: ')
+        nif = int(input('Por favor indique su cédula: '))
 
         if nif in clients:
             nombre = clients[nif].get('nombre')
