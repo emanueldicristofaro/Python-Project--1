@@ -88,11 +88,13 @@ def pedidoSandwiches(nombre):
 
                     elif eleccion_s == '':
                         print()
-                        print('Usted seleccionó un sandwich ' + eleccion_escogida, end=' '),
                         if lista_ingredientes_escogidos:
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida , end=' '),
                             print('con ', end='')
                             for ingerdiente in lista_ingredientes_escogidos:
                                 print(ingerdiente, end=", ")
+                        else: 
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida + ' con Queso', end=' '),
                         print(f'\nSubtotal a pagar por un sandwich {eleccion_escogida}: {precio_subtotal}')
                         precio_total += precio_subtotal
                         precio_subtotal = 0
@@ -163,11 +165,13 @@ def pedidoSandwiches(nombre):
 
                     elif eleccion_s == '':
                         print()
-                        print('Usted seleccionó un sandwich ' + eleccion_escogida, end=' '),
                         if lista_ingredientes_escogidos:
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida , end=' '),
                             print('con ', end='')
                             for ingerdiente in lista_ingredientes_escogidos:
                                 print(ingerdiente, end=", ")
+                        else: 
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida + ' con Queso', end=' '),
                         print(f'\nSubtotal a pagar por un sandwich {eleccion_escogida}: {precio_subtotal}')
                         precio_total += precio_subtotal
                         precio_subtotal = 0
@@ -238,11 +242,13 @@ def pedidoSandwiches(nombre):
 
                     elif eleccion_s == '':
                         print()
-                        print('Usted seleccionó un sandwich ' + eleccion_escogida, end=' '),
                         if lista_ingredientes_escogidos:
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida , end=' '),
                             print('con ', end='')
                             for ingerdiente in lista_ingredientes_escogidos:
                                 print(ingerdiente, end=", ")
+                        else: 
+                            print('Usted seleccionó un sandwich ' + eleccion_escogida + ' con Queso', end=' '),
                         print(f'\nSubtotal a pagar por un sandwich {eleccion_escogida}: {precio_subtotal}')
                         precio_total += precio_subtotal
                         precio_subtotal = 0
