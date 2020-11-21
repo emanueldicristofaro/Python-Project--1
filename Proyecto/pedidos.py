@@ -354,6 +354,7 @@ def pedidoSandwiches(nombre):
                         print('Gracias por su compra, regrese pronto')
                         banco.descontarCredito(precio_total, nif)
                         eleccion_escogida = ''
+                        contador = 1
                         precio_total = 0
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
@@ -361,6 +362,7 @@ def pedidoSandwiches(nombre):
                     elif si_no_pp == 'no':
                         print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
                         eleccion_escogida = ''
+                        contador = 1
                         precio_total = 0
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
