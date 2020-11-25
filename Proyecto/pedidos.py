@@ -274,34 +274,34 @@ def pedidoSandwiches(nombre):
             if eleccion_b == 'pe':
                 print()
                 print('Usted a escogido Pepsi')
-                print()
-                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Pepsi')
                 lista_bebidas_escogidas.append(lista_bebidas[0])
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
 
             elif eleccion_b == 'co':
                 print()
                 print('Usted a escogido Coca Cola')
-                print()
-                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Coca Cola')
                 lista_bebidas_escogidas.append(lista_bebidas[1])
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
 
             elif eleccion_b == 'fres':
                 print()
                 print('Usted a escogido Frescolita')
-                print()
-                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Frescolita')
                 lista_bebidas_escogidas.append(lista_bebidas[2])
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
 
             elif eleccion_b == 'chi':
                 print()
                 print('Usted a escogido Chinotto')
-                print()
-                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Chinotto')
                 lista_bebidas_escogidas.append(lista_bebidas[3])
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
 
             else:
                 print('Por favor debe escoger una de las bebidas indicadas') 
@@ -333,6 +333,7 @@ def pedidoSandwiches(nombre):
                         print('Gracias por su compra, regrese pronto')
                         eleccion_escogida = ''
                         precio_total = 0
+                        contador = 1
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
                         banco.descontarDebito(precio_total, nif)
@@ -340,6 +341,7 @@ def pedidoSandwiches(nombre):
                     elif si_no_pp == 'no':
                         print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
                         eleccion_escogida = ''
+                        contador = 1
                         precio_total = 0
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
