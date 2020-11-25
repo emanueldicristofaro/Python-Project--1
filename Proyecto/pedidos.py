@@ -16,7 +16,7 @@ def pedidoSandwiches(nombre):
     lista_bebidas = ['Pepsi', 'Coca Cola', 'Frescolita', 'Chinotto']
     lista_ingredientes = ['Jamón', 'Champiñiones', 'Pimentón', 'Doble Queso', 'Aceitunas', 'Pepperoni', 'Salchichón']
 
-    precios_bebidas = {'Pepsi': 15, 'Coca Cola': 17, 'Frescolita': 14, 'Chinotto': 15}
+    precios_bebidas = {'Pepsi': 50, 'Coca Cola': 57, 'Frescolita': 54, 'Chinotto': 51}
 
     option = ''
     while option != '4':
@@ -266,28 +266,40 @@ def pedidoSandwiches(nombre):
         if option == '2':
             print()
             print('Escoja una opción')
-            print('Bebidas: Pepsi (pe) Precio: 15 BsS, Coca Cola (co) Precio: 17 BsS, Frescolita (fres) Precio: 14 BsS, Chinotto (chi) Precio: 15 BsS')
+            print('Bebidas: Pepsi (pe) Precio: 50 BsS, Coca Cola (co) Precio: 57 BsS, Frescolita (fres) Precio: 54 BsS, Chinotto (chi) Precio: 51 BsS')
 
             eleccion_b = input('Introduzca su eleccion: ')
             eleccion_b = eleccion_b.lower()
 
             if eleccion_b == 'pe':
+                print()
                 print('Usted a escogido Pepsi')
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Pepsi')
                 lista_bebidas_escogidas.append(lista_bebidas[0])
 
             elif eleccion_b == 'co':
+                print()
                 print('Usted a escogido Coca Cola')
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Coca Cola')
                 lista_bebidas_escogidas.append(lista_bebidas[1])
 
             elif eleccion_b == 'fres':
+                print()
                 print('Usted a escogido Frescolita')
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Frescolita')
                 lista_bebidas_escogidas.append(lista_bebidas[2])
 
             elif eleccion_b == 'chi':
+                print()
                 print('Usted a escogido Chinotto')
+                print()
+                print(f'Precio total a pagar {precio_total} BsS')
                 precio_total = precio_total + precios_bebidas.get('Chinotto')
                 lista_bebidas_escogidas.append(lista_bebidas[3])
 
@@ -319,11 +331,11 @@ def pedidoSandwiches(nombre):
 
                     if si_no_pp == 'si':
                         print('Gracias por su compra, regrese pronto')
-                        banco.descontarDebito(precio_total, nif)
                         eleccion_escogida = ''
                         precio_total = 0
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
+                        banco.descontarDebito(precio_total, nif)
                         
                     elif si_no_pp == 'no':
                         print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
@@ -352,12 +364,12 @@ def pedidoSandwiches(nombre):
 
                     if si_no_pp == 'si':
                         print('Gracias por su compra, regrese pronto')
-                        banco.descontarCredito(precio_total, nif)
                         eleccion_escogida = ''
                         contador = 1
                         precio_total = 0
                         lista_ingredientes_escogidos.clear()
                         lista_bebidas_escogidas.clear()
+                        banco.descontarCredito(precio_total, nif)
                         
                     elif si_no_pp == 'no':
                         print('Lamentamos que su pedido no haya sido de su agrado, puede volver a intentarlo')
